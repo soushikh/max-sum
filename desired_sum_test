@@ -1,12 +1,12 @@
 
-fclass MaxSumTest 
+fclass FindSumTest 
 {
   private: 
   BinaryTreeNode* root;
   public:
   
   //Test 1 (expected output 8 3 16   3 21   -6 30   5 19)  
-  void Test1 {                                
+  void find_Sum_Test1 {                                
   root = new BinaryTreeNode(8);
   BinaryTreeNode* N2 = new BinaryTreeNode(3);
   BinaryTreeNode* N3 = new BinaryTreeNode(-6);
@@ -41,7 +41,7 @@ fclass MaxSumTest
  }
  
  //Test 2 (expected output 0 -8   -8   -8 7 -7   7 -15   0 21 -29   21 -29   0 21 -7 -22   21 -7 -22)
- void Test2 {
+ void find_Sum_Test2 {
  root = new BinaryTreeNode(0);
  BinaryTreeNode* N2 = new BinaryTreeNode(-8);
  BinaryTreeNode* N3 = new BinaryTreeNode(21);
@@ -82,3 +82,38 @@ fclass MaxSumTest
  
  find_and_print_sum_of_nodes (root, -8, 0, "");
  //insert cleanup 
+ }
+ 
+ //Test 3
+ void find_Sum_Test3{
+ root = new BinaryTreeNode(28);
+ BinaryTreeNode* N2 = new BinaryTreeNode(4);
+ BinaryTreeNode* N3 = new BinaryTreeNode(9);
+ BinaryTreeNode* N4 = new BinaryTreeNode(1);
+ BinaryTreeNode* N5 = new BinaryTreeNode(-3);
+ BinaryTreeNode* N6 = new BinaryTreeNode(-14);
+ BinaryTreeNode* N7 = new BinaryTreeNode(5);
+ BinaryTreeNode* N8 = new BinaryTreeNode(7);
+ 
+ root->left = N2;
+ root->right = N3;
+ N2->left = N4;
+ N2->right = N5;
+ N3->left = NULL;
+ N3->right = N6;
+ N4->left = N7;
+ N4->right = NULL;
+ N5->left = N8;
+ N5->right = NULL;
+ N6->left = NULL;
+ N6->right = NULL;
+ N7->left = NULL;
+ N7->right = NULL;
+ N8->left = NULL;
+ N8->right = NULL;
+ 
+find_and_print_sum_of_nodes (root, 35, 0, "");
+//insert cleanup
+}
+
+};
