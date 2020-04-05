@@ -1,1 +1,47 @@
 
+fclass MaxSumTest 
+{
+  private: 
+  BinaryTreeNode* root;
+  public:
+  
+  //Test 1 (expected output 8 3 16   3 21   -6 30   5 19)  
+  void Test1 {                                
+  root = new BinaryTreeNode(8);
+  BinaryTreeNode* N2 = new BinaryTreeNode(3);
+  BinaryTreeNode* N3 = new BinaryTreeNode(-6);
+  BinaryTreeNode* N4 = new BinaryTreeNode(13);
+  BinaryTreeNode* N5 = new BinaryTreeNode(21);
+  BinaryTreeNode* N6 = new BinaryTreeNode(30);
+  BinaryTreeNode* N7 = new BinaryTreeNode(5);
+  BinaryTreeNode* N8 = new BinaryTreeNode(15);
+  BinaryTreeNode* N9 = new BinaryTreeNode(19);
+  
+  root->left = N2;
+  root->right = N3;
+  N2->left = N4;
+  N2->right = N5;
+  N3->left = N6;
+  N3->right = N7;
+  N4->left = NULL;
+  N4->right = NULL;
+  N5->left = N8;
+  N5->right = NULL;
+  N6->left = NULL;
+  N6->right = NULL;
+  N7->left = NULL;
+  N7->right = N9
+  N8->left = NULL;
+  N8->right = NULL;
+  N9->left = NULL;
+  N9->right = NULL;
+ 
+ find_and_print_sum_of_nodes (root, 24, 0, "");
+ //insert cleanup
+ }
+ 
+ //Test 2 (expected output 0 -8   -8   -8 7 -7   7 -15   0 21 -29   21 -29   0 21 -7 -22   21 -7 -22)
+ void Test2 {
+ 
+ 
+  
