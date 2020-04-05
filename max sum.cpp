@@ -11,8 +11,7 @@ public:
 	BinaryTreeNode(int new_val) : val(new_val), left(NULL), right(NULL) {}
 	void print() { cout << val << " "; }
 
-	friend class BinaryTree;
-	friend class BinaryTreeTest;	
+	friend class MaxSumTest;	
 }; 
 int find_max_sum_of_nodes (BinaryTreeNode* T,  int &temp_max_sum )
 {
