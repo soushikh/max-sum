@@ -30,7 +30,7 @@ void find_and_print_sum_of_nodes (BinaryTreeNode* T, int desired_sum, int cur_su
 	find_and_print_sum_of_nodes (T->left, desired_sum, new_sum, new_buffer);
 	// continue down the right subtree 
 	find_and_print_sum_of_nodes (T->right, desired_sum, new_sum, new_buffer);
-	// TODO: restart from the left subtree if buffer ? “” 
-	// TODO: restart from the right subtree if buffer ? “”
+	// TODO: restart from the left subtree if buffer = “” 
+	// TODO: restart from the right subtree if buffer = “”
 }
     
