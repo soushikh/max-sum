@@ -33,5 +33,25 @@ class SumTest
       clean_up(root);
       return(max == 54);
     }
+    bool test2()
+    {
+      BinaryTreeNode* child = new BinaryTreeNode(-3);
+      child->left = new BinaryTreeNode(6);
+      BinaryTreeNode* parent = new BinaryTreeNode(1);
+      parent->left = child;
+      child = new BinaryTreeNode(2);
+      child->left = new BinaryTreeNode(7);
+      parent->right = child;
+      root = new BinaryTreeNode(8);
+      root->left = parent;
+      parent = new BinaryTreeNode(-7);
+      child = new BinaryTreeNode(2);
+      child->right = new BinaryTreeNode(5);
+      child->left = new BinaryTreeNode(1);
+      parent->right = child;
+      int max = find_max_sum_of_nodes(root);
+      clean_up(root);
+      return(max == 12);
+    }
   
 }
